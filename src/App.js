@@ -12,6 +12,7 @@ import SignUp from './pages/Signup'
 import ForgotPassword from './pages/ForgotPassword'
 import Navbar from './components/Navbar'
 import PrivateRoutes from './components/PrivateRoutes'
+import CreateListing from './pages/CreateListing'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
+          <Route path="/createlisting" element={<CreateListing />} />
         </Routes>
         <Navbar></Navbar>
         <ToastContainer autoClose={3000} />
