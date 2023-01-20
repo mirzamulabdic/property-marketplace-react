@@ -13,6 +13,9 @@ import ForgotPassword from './pages/ForgotPassword'
 import Navbar from './components/Navbar'
 import PrivateRoutes from './components/PrivateRoutes'
 import CreateListing from './pages/CreateListing'
+import EditListing from './pages/EditListing'
+import Listing from './pages/Listing'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -29,6 +32,12 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/createlisting" element={<CreateListing />} />
+          <Route path="/editlisting/:listingId" element={<EditListing />} />
+          <Route
+            path="/category/:categoryName/:listingId"
+            element={<Listing />}
+          />
+          <Route path="/contact/:landlordId" element={<Contact />} />
         </Routes>
         <Navbar></Navbar>
         <ToastContainer autoClose={3000} />
